@@ -1,5 +1,5 @@
 # Bem-vindo à "Pokédex.NET"
-![Pokeball](./Imagens/Poké_Ball.png){:height="30px" width="30px"}
+<img src =".\Imagens\Poké_Ball.png" width="100" height="100">
 ## Descrição
 Nossa Pokédex.NET faz tem como finalidade fazer uma requisição HTTP Get, trazendo uma lista dinâmica de Pokémon diretamente para o WindowsForm. Você pode conferir os IDs, nomes, imagens e poderes dos Pokémon.
  ![Pokedex](./Imagens/pokedex.png) 
