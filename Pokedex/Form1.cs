@@ -70,21 +70,37 @@ namespace Pokedex
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            Pokemon pokemon = new Pokemon();
-            pokemonList = await pokemon.Pokemons(10);
-            PreencheLabel();
+            try
+            {
+                Pokemon pokemon = new Pokemon();
+                pokemonList = await pokemon.Pokemons(10);
+                PreencheLabel();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro: "+ex.Message);
+            }
+            
         }
 
         private void PreencheLabel()
         {
-            for (int i = 0; i < 10; i++)
+            try
             {
-                labelsIDs[i].Text = pokemonList[i].Id.ToString();
-                labesNomes[i].Text = pokemonList[i].Name;
-                labesPower[i].Text = pokemonList[i].PokemonTypes[0].Type.Name;
-                imagem = new LoadImagemPokemon(pokemonList[i].Sprites.FrontDefault);
-                pictureBoxList[i].Image = imagem.RetornaImagem();
+                for (int i = 0; i < 10; i++)
+                {
+                    labelsIDs[i].Text = pokemonList[i].Id.ToString();
+                    labesNomes[i].Text = pokemonList[i].Name;
+                    labesPower[i].Text = pokemonList[i].PokemonTypes[0].Type.Name;
+                    imagem = new LoadImagemPokemon(pokemonList[i].Sprites.FrontDefault);
+                    pictureBoxList[i].Image = imagem.RetornaImagem();
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            
         }
     }
 }

@@ -22,7 +22,7 @@ public class  GetPokemonAPI
     {
             try
             {
-            string url = $"{_urlPath}{id.ToString()}";
+            string url = $"{_urlPath}{id}";
             return await _httpClient.GetStringAsync(url);
             }
             catch (Exception ex)
