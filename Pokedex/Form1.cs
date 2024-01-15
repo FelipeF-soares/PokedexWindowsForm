@@ -78,7 +78,7 @@ namespace Pokedex
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Erro: "+ex.Message);
+                MessageBox.Show(ex.Message);
             }
             
         }
@@ -98,7 +98,7 @@ namespace Pokedex
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
             
         }
